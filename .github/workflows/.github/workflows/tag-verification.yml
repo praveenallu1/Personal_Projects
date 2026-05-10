@@ -1,0 +1,13 @@
+name: tag-verification
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  verify-tag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Tag workflow executed"
